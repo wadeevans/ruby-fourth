@@ -14,3 +14,10 @@ File.open('three_lines.txt') do |file|
 	end
 end
 
+File.open('three_lines.txt', 'w') do |file|
+	file.puts 'Oh no! Four lines now'
+	file.puts 'and a fifth.'
+end
+
+IO.foreach('three_lines.txt') {|line| puts line}
+
