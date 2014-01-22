@@ -1,2 +1,3 @@
-Oh no! Four lines now
-and a fifth.
+Hello Ruby
+This is a file
+and it has three lines
