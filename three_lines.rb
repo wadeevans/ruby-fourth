@@ -1,3 +1,10 @@
+File.open('three_lines.txt', 'w') do |file|
+	file.puts 'Hello Ruby'
+	file.puts 'This is a file'
+	file.puts 'and it has three lines'
+end
+
+
 file = File.new('three_lines.txt');
 
 file.each{|line| puts "The next line in the file contains: '#{line.chomp}'"}
@@ -14,7 +21,8 @@ File.open('three_lines.txt') do |file|
 	end
 end
 
-File.open('three_lines.txt', 'w') do |file|
+
+File.open('three_lines.txt', 'a') do |file|
 	file.puts 'Oh no! Four lines now'
 	file.puts 'and a fifth.'
 end
