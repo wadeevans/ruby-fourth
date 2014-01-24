@@ -27,9 +27,11 @@ def process(selection)
 	when "Save", "save", "SAVE"
 		# save the input to file
 		puts "You chose Save"
+		save_input(input)
 	when "Read", "read", "READ"
 		# read the input file
 		puts "You chose Read"
+		read_file("hello_from_ruby.txt")
 	when "Introspection"
 		introspection()
 	
@@ -45,7 +47,7 @@ end
 
 
 
-  	puts "Enter some input: "
+  	puts "Enter Input to enter some input: "
 
 	input = STDIN.gets
 
@@ -55,7 +57,26 @@ end
 
 	command = STDIN.gets.chomp
 
-	process(command)
+	
+
+	case command
+	when "Save", "save", "SAVE"
+		# save the input to file
+		puts "You chose Save"
+		save_input(input)
+	when "Read", "read", "READ"
+		# read the input file
+		puts "You chose Read"
+		read_file("hello_from_ruby.txt")
+	when "Introspection"
+		introspection()
+	
+	when "9"
+		# exit
+		exit
+	else
+		puts "I don't understand, please try again"
+	end
 
 
 
